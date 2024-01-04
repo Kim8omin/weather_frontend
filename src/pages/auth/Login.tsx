@@ -1,12 +1,12 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import login from "../../src/assets/img/login/login.png";
-import devicon_google from "../../src/assets/img/login/devicon_google.png";
-import kakao from "../assets/img/login/kakao.png";
+import login from "../../assets/img/login/login.png"
+import devicon_google from "../../assets/img/login/devicon_google.png";
+import kakao from "../../assets/img/login/kakao.png";
 //import { useDispatch } from "react-redux";
 //import { authActionCreator } from "../redux/thunk/AuthThunk";
-import { signInWithGoogle } from "../../src/utils/GoogleAuth";
+import { signInWithGoogle } from "../../utils/GoogleAuth";
 import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
 
 interface Props {}

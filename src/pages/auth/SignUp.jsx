@@ -1,6 +1,6 @@
 import { getAuth, createUserWithEmailAndPassword, Auth, UserCredential } from "firebase/auth";
 import React, { useState } from "react";
-import weather from "../assets/img/login/weather.png";
+import weather from "../../assets/img/login/weather.png";
 import styled from "styled-components";
 import {useNavigate } from "react-router-dom";
 
@@ -9,6 +9,9 @@ const RegistrationComponent: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [address, setAddress] = useState(""); 
+  const [file, setFile]= useState(null); 
+
   const navigate = useNavigate();
 
   const handleRegistration = async () => {
@@ -49,7 +52,15 @@ const RegistrationComponent: React.FC = () => {
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         
-        
+        <div>
+        <label>주소:</label>
+        <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+        </div>
+
+        <div>
+        <label>프로필 이미지를 등록하세요:</label>
+        <input type="file" value={file} onChange={(e) => setFile(e.target.value)} />
+        </div>
 
         <button type="button" onClick={handleRegistration}>
           회원가입
