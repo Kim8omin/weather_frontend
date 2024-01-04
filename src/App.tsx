@@ -3,8 +3,8 @@ import React from "react";
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 import Layout from "./components/layout/Layout";
-import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/SignUp";
 // eslint-disable-next-line @typescript-eslint/naming-convention
 import NewPost from "./pages/post/NewPost";
 
